@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar app color="#1B4188">
+    <v-app-bar app color="#1B4188" style="z-index: 10000 !important;">
       <v-app-bar-nav-icon
         class="hidden-lg-and-up"
         @click="drawer = true"
