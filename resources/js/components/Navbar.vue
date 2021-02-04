@@ -74,7 +74,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .v-btn__content,
 .light {
   color: white !important;

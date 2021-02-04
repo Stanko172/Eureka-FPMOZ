@@ -9,7 +9,9 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import router from './router/index.js';
-import Vuetify from "../plugins/vuetify"
+import Vuetify from "../plugins/vuetify";
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -22,6 +24,7 @@ import Vuetify from "../plugins/vuetify"
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('App', require('./App.vue').default);
+Vue.use(VueAxios, axios);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

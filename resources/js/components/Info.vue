@@ -54,7 +54,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .switch__card {
   background: white;
   box-shadow: 2px 8px 15px 0.2px #888888;
