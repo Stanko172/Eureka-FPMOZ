@@ -1,109 +1,85 @@
+
 <template>
-    <div>
-      <Navbar />
-
-      <Carousel />
-
-      <v-container class="container-margin">
-        <v-app>
-          <v-skeleton-loader
-            :loading="loading"
-            type="card"
-            transition="scale-transition"
-            v-for="(notification, i) in visiblePages"
-            :key="i"
-          >
-            <v-hover
-              v-slot:default="{ hover }"
-              close-delay="80"
-            >
-              <v-card
-                class="mx-auto"
-                max-width="400"
-              >
-                <v-img
-                  class="white--text align-end"
-                  height="200px"
-                  src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                >
-                </v-img>
-
-                <v-card-text class="text--primary">
-                  <div style="font-size: 18px; color: #1B4188; line-height: 32px;">Interview sa prodekanom za nastavu - Marin Ćorluka</div>
-                </v-card-text>
-
-                <v-card-actions>
-                  <v-btn
-                    color="#1B4188"
-                    block
-                  >
-                    Opširnije
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-hover>
-          </v-skeleton-loader>
-
-          <v-pagination
+  <v-container class="container-margin">
+    <Navbar />
+    <v-app>
+      <v-skeleton-loader
+        :loading="loading"
+        type="card"
+        transition="scale-transition"
+        v-for="(notification, i) in visiblePages"
+        :key="i"
+      >
+        <v-hover
+          v-slot:default="{ hover }"
+          close-delay="80"
+        >
+          <v-card
+            class="mx-auto mt-6"
             v-model="page"
-            :length="Math.ceil(notifications.length/perPage)"
-            class="pagination-margin"
-          ></v-pagination>
-        </v-app>
-      </v-container>
-  </div>
+            shaped
+            outlined
+            width="90%"
+            :elevation="hover ? 8 : 2"
+          >
+            <v-card-text>
+              <v-container>
+                <v-row>
+              <v-col cols="4">
+
+                <v-img
+                  width="350"
+                  height="220"
+                  :src=" 'https://web-admin.sum.ba/api/storage/' + notification.image"
+                ></v-img>
+
+              </v-col>
+
+              <v-col cols="8">
+
+                <div class="d-flex flex-column justify-content-between" style="height: 100%;">
+
+                  <div>
+                <p class="display-1" color="blue darken-1">{{ notification.title }}</p>
+                <p class="mt-n3">{{ notification.created_at }}</p>
+                <div class="text--primary">{{notification.subtitle}}</div>
+              </div>
+                <div>
+                  <v-btn color="#1B4188">Opširnije</v-btn>
+                </div>
+
+                </div>
+
+              </v-col>
+            </v-row>
+            </v-container>
+            </v-card-text>
+          </v-card>
+        </v-hover>
+      </v-skeleton-loader>
+
+      <v-pagination
+        v-model="page"
+        :length="Math.ceil(notifications.length/perPage)"
+        class="pagination-margin"
+      ></v-pagination>
+    </v-app>
+  </v-container>
 </template>
 
 <script>
 import Navbar from '../components/Navbar.vue';
-import Carousel from '../components/Carousel.vue';
 export default {
-  components: {
-    Navbar,
-    Carousel
+  components:{
+    Navbar
   },
   data: () => ({
-    notifications: [],
+    notifications: [{}, {}, {}, {}, {}, {}],
     loading: true,
-    api: `https://${window.location.host}/api/articles`,
-    months: [
-      'Siječanj',
-      'Veljača',
-      'Ožujak',
-      'Travanj',
-      'Svibanj',
-      'Lipanj',
-      'Srpanj',
-      'Kolovoz',
-      'Rujan',
-      'Listopad',
-      'Studeni',
-      'Prosinac'
-    ],
-    days: [
-      'Nedjelja',
-      'Ponedjeljak',
-      'Utorak',
-      'Srijeda',
-      'Četvrtak',
-      'Petak',
-      'Subota'
-    ],
     page: 1,
     perPage: 8
   }),
   methods: {
-    formatDate(date) {
-      return `
-        ${this.days[new Date(date).getDay()]},
-        ${new Date(date).getDate()}
-        ${this.months[new Date(date).getMonth()]}
-        ${new Date(date).getFullYear()}
-        ${('0' + new Date(date).getHours()).slice(-2)}:${(
-        '0' + new Date(date).getMinutes()
-      ).slice(-2)}
-      `;
-    },
     fetchData() {
         let config = {
           headers: {
@@ -145,7 +121,8 @@ export default {
   }
 };
 </script>
-<style scoped>
+
+<style>
 #app .v-card--shaped {
   border-radius: 24px 4px;
 }
@@ -161,7 +138,6 @@ export default {
   margin: 32px 0 70px 0;
 }
 </style>
-
 
 
 
