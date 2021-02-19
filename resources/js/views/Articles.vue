@@ -45,7 +45,7 @@
                 <div class="text--primary">{{notification.subtitle}}</div>
               </div>
                 <div>
-                  <v-btn color="#1B4188">Opširnije</v-btn>
+                  <v-btn color="#1B4188" @click="goToArticle(notification.alias)">Opširnije</v-btn>
                 </div>
 
                 </div>
@@ -105,6 +105,9 @@ export default {
         offset: 0,
         easing: 'easeInOutCubic'
       });
+    },
+    goToArticle(alias){
+      this.$router.push({name: 'Article', params: {alias: alias}})
     }
   },
   computed: {
