@@ -2396,6 +2396,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -2403,7 +2412,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
+      notifications: [],
       notification: {},
+      notification_id: null,
       items: [{
         text: 'Naslovnica',
         disabled: false,
@@ -2413,14 +2424,23 @@ __webpack_require__.r(__webpack_exports__);
         disabled: false,
         to: '/vijesti'
       }, {
-        text: 'Link 2',
-        disabled: true,
-        to: 'breadcrumbs_link_2'
+        text: '',
+        disabled: true
       }]
     };
   },
+  computed: {
+    filteredArticles: function filteredArticles() {
+      var _this = this;
+
+      var notifications = this.notifications.filter(function (notification) {
+        return notification.id !== _this.notification_id;
+      });
+      return [notifications[0]];
+    }
+  },
   created: function created() {
-    var _this = this;
+    var _this2 = this;
 
     var config = {
       headers: {
@@ -2432,12 +2452,15 @@ __webpack_require__.r(__webpack_exports__);
     };
     var article_alias = this.$route.params.alias;
     this.axios.post('https://web-admin.sum.ba/api/web/objave', data, config).then(function (response) {
+      _this2.notifications = response.data;
       response.data.forEach(function (notification) {
         if (notification.alias === article_alias) {
-          _this.notification = notification;
+          _this2.notification = notification;
+          _this2.notification_id = notification.id;
+          _this2.items[2].text = notification.alias;
         }
       });
-      console.log(_this.notification);
+      console.log(_this2.notification);
     });
   }
 });
@@ -41937,7 +41960,7 @@ var render = function() {
                   _c(
                     "v-col",
                     { attrs: { sm: "12", md: "4", lg: "4" } },
-                    _vm._l(2, function(i, index) {
+                    _vm._l(_vm.filteredArticles, function(article, index) {
                       return _c(
                         "v-card",
                         {
@@ -41951,17 +41974,33 @@ var render = function() {
                           }
                         },
                         [
-                          _c("v-card-title", [
-                            _c(
-                              "span",
-                              { staticClass: "title font-weight-light" },
-                              [_vm._v("Eureka")]
-                            )
-                          ]),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "d-flex justify-content-between align-center"
+                            },
+                            [
+                              _c("v-card-title", [
+                                _c(
+                                  "span",
+                                  { staticClass: "title font-weight-light" },
+                                  [_vm._v("Eureka")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("v-btn", { attrs: { text: "" } }, [
+                                _vm._v("Više")
+                              ])
+                            ],
+                            1
+                          ),
                           _vm._v(" "),
                           _c("v-card-text", { staticClass: "text-body-1" }, [
                             _vm._v(
-                              '\n                      "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                    '
+                              "\n                      " +
+                                _vm._s(_vm.notification.title) +
+                                "\n                    "
                             )
                           ]),
                           _vm._v(" "),
@@ -41974,7 +42013,12 @@ var render = function() {
                   )
                 ],
                 1
-              )
+              ),
+              _vm._v(" "),
+              _c("v-container", {
+                staticClass: "text-justify",
+                domProps: { innerHTML: _vm._s(_vm.notification.content) }
+              })
             ],
             1
           )
@@ -101385,9 +101429,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var vuetify_lib_components_VBreadcrumbs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VBreadcrumbs */ "./node_modules/vuetify/lib/components/VBreadcrumbs/index.js");
-/* harmony import */ var vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VCard */ "./node_modules/vuetify/lib/components/VCard/index.js");
-/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/index.js");
-/* harmony import */ var vuetify_lib_components_VImg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VImg */ "./node_modules/vuetify/lib/components/VImg/index.js");
+/* harmony import */ var vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VBtn */ "./node_modules/vuetify/lib/components/VBtn/index.js");
+/* harmony import */ var vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VCard */ "./node_modules/vuetify/lib/components/VCard/index.js");
+/* harmony import */ var vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VGrid */ "./node_modules/vuetify/lib/components/VGrid/index.js");
+/* harmony import */ var vuetify_lib_components_VImg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuetify/lib/components/VImg */ "./node_modules/vuetify/lib/components/VImg/index.js");
 
 
 
@@ -101418,7 +101463,8 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 
 
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VBreadcrumbs: vuetify_lib_components_VBreadcrumbs__WEBPACK_IMPORTED_MODULE_4__["VBreadcrumbs"],VBreadcrumbsItem: vuetify_lib_components_VBreadcrumbs__WEBPACK_IMPORTED_MODULE_4__["VBreadcrumbsItem"],VCard: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_5__["VCard"],VCardActions: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_5__["VCardActions"],VCardText: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_5__["VCardText"],VCardTitle: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_5__["VCardTitle"],VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__["VCol"],VContainer: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__["VContainer"],VImg: vuetify_lib_components_VImg__WEBPACK_IMPORTED_MODULE_7__["VImg"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_6__["VRow"]})
+
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VBreadcrumbs: vuetify_lib_components_VBreadcrumbs__WEBPACK_IMPORTED_MODULE_4__["VBreadcrumbs"],VBreadcrumbsItem: vuetify_lib_components_VBreadcrumbs__WEBPACK_IMPORTED_MODULE_4__["VBreadcrumbsItem"],VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__["VBtn"],VCard: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__["VCard"],VCardActions: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__["VCardActions"],VCardText: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__["VCardText"],VCardTitle: vuetify_lib_components_VCard__WEBPACK_IMPORTED_MODULE_6__["VCardTitle"],VCol: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__["VCol"],VContainer: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__["VContainer"],VImg: vuetify_lib_components_VImg__WEBPACK_IMPORTED_MODULE_8__["VImg"],VRow: vuetify_lib_components_VGrid__WEBPACK_IMPORTED_MODULE_7__["VRow"]})
 
 
 /* hot reload */

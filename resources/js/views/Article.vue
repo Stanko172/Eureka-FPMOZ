@@ -1,7 +1,7 @@
 <template>
     <div>
         <Navbar />
-
+        
         <v-container>
 
           <v-breadcrumbs :items="items">
@@ -33,16 +33,21 @@
                         dark
                         max-width="400"
                         height="190"
-                        v-for="(i, index) in 2"
+                        v-for="(article, index) in filteredArticles"
                         :key="index"
 
                       >
-                        <v-card-title>
-                          <span class="title font-weight-light">Eureka</span>
-                        </v-card-title>
+                        <div class="d-flex justify-content-between align-center">
+
+                            <v-card-title>
+                              <span class="title font-weight-light">Eureka</span>
+                            </v-card-title>
+
+                            <v-btn text>Više</v-btn>
+                        </div>
 
                         <v-card-text class="text-body-1">
-                          "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
+                          {{ notification.title }}
                         </v-card-text>
 
                         <v-card-actions>
@@ -51,6 +56,10 @@
                       </v-card>
                   </v-col>
               </v-row>
+
+              <v-container v-html="notification.content" class="text-justify">
+
+              </v-container>
           </v-container>
           
             
@@ -66,7 +75,9 @@ import Navbar from '../components/Navbar.vue';
         },
         data(){
             return{
+                notifications: [],
                 notification: {},
+                notification_id: null,
                 items: [
                 {
                   text: 'Naslovnica',
@@ -79,11 +90,20 @@ import Navbar from '../components/Navbar.vue';
                   to: '/vijesti',
                 },
                 {
-                  text: 'Link 2',
-                  disabled: true,
-                  to: 'breadcrumbs_link_2',
+                  text: '',
+                  disabled: true
                 },
               ],
+            }
+        },
+        computed: {
+            filteredArticles(){
+                let notifications = this.notifications.filter(notification => {
+                    return notification.id !== this.notification_id
+                })
+
+                return [notifications[0]]
+
             }
         },
         created() {
@@ -102,14 +122,18 @@ import Navbar from '../components/Navbar.vue';
             this.axios
             .post('https://web-admin.sum.ba/api/web/objave', data, config)
             .then(response => {
+                this.notifications = response.data
                 response.data.forEach(notification =>{
                     if(notification.alias === article_alias){
                         this.notification = notification
+                        this.notification_id = notification.id
+
+                        this.items[2].text = notification.alias 
                     }
                 })
 
                 console.log(this.notification)
               });
-            }
+        }
     }
 </script>
