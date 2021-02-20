@@ -294,7 +294,7 @@ import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
     .lb img {
         max-width: 90%;
         max-height: 80%;
-        margin-top: 2%;
+        margin-top: 8%;
     }
 
     .lb_target {
