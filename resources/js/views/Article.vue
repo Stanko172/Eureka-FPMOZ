@@ -20,9 +20,9 @@
 
           <!--Article info-->
           <v-row>
-              <v-col sm="12" md="4" lg="3"><i class="far fa-user"></i><span class="icon-text">{{ notification.author }}</span></v-col>
-              <v-col sm="12" md="4" lg="3"><i class="far fa-calendar-alt"></i><span class="icon-text">{{ notification.date_diff }}</span></v-col>
-              <v-col sm="12" md="4" lg="3"><i class="far fa-eye"></i><span class="icon-text">{{ notification.views }}</span></v-col>
+              <v-col cols="12" sm="4" md="3"><i class="far fa-user"></i><span class="icon-text">{{ notification.author }}</span></v-col>
+              <v-col cols="12" sm="4" md="3"><i class="far fa-calendar-alt"></i><span class="icon-text">{{ notification.date_diff }}</span></v-col>
+              <v-col cols="12" sm="4" md="3"><i class="far fa-eye"></i><span class="icon-text">{{ notification.views }}</span></v-col>
           </v-row>
         </v-container>
 
@@ -65,6 +65,47 @@
                         </v-card-actions>
                       </v-card>
                   </v-col>
+              </v-row>
+
+              <!--Social media-->
+              <v-row
+                align="center"
+                justify="space-around"
+              >
+
+                <v-col align="center">
+                    <v-btn
+                      tile
+                      color="success"
+                      id="social-btn-1"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                      | facebook
+                    </v-btn>
+                </v-col>
+
+                <v-col align="center">
+                    <v-btn
+                      tile
+                      color="success"
+                      id="social-btn-2"
+                    >
+                      <i class="fab fa-instagram"></i>
+                      | instagram
+                    </v-btn>
+                </v-col>
+
+                <v-col align="center">
+                    <v-btn
+                      tile
+                      color="success"
+                      id="social-btn-3"
+                    >
+                      <i class="fab fa-youtube"></i>
+                      | youtube
+                    </v-btn>
+                </v-col> 
+
               </v-row>
 
               <v-container v-html="notification.content" class="text-justify">
@@ -189,5 +230,22 @@ import Navbar from '../components/Navbar.vue';
 
     .icon-text{
         font-size: 18px;
+    }
+
+    .fab{
+        font-size: 24px;
+        margin-right: 12px;
+    }
+
+    #social-btn-1{
+        background: rgb(59, 89, 152) !important;
+    }
+
+    #social-btn-2{
+        background: rgb(64,93,230) !important;
+    }
+
+    #social-btn-3{
+        background: rgb(255, 0, 0) !important;
     }
 </style>

@@ -2415,6 +2415,47 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -9117,7 +9158,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.far[data-v-4be6f627]{\n    font-size: 24px;\n    color: #1B4188;\n    margin-right: 12px;\n}\n.icon-text[data-v-4be6f627]{\n    font-size: 18px;\n}\n", ""]);
+exports.push([module.i, "\n.far[data-v-4be6f627]{\n    font-size: 24px;\n    color: #1B4188;\n    margin-right: 12px;\n}\n.icon-text[data-v-4be6f627]{\n    font-size: 18px;\n}\n.fab[data-v-4be6f627]{\n    font-size: 24px;\n    margin-right: 12px;\n}\n#social-btn-1[data-v-4be6f627]{\n    background: rgb(59, 89, 152) !important;\n}\n#social-btn-2[data-v-4be6f627]{\n    background: rgb(64,93,230) !important;\n}\n#social-btn-3[data-v-4be6f627]{\n    background: rgb(255, 0, 0) !important;\n}\n", ""]);
 
 // exports
 
@@ -42037,21 +42078,21 @@ var render = function() {
                   _c(
                     "v-row",
                     [
-                      _c("v-col", { attrs: { sm: "12", md: "4", lg: "3" } }, [
+                      _c("v-col", { attrs: { cols: "12", sm: "4", md: "3" } }, [
                         _c("i", { staticClass: "far fa-user" }),
                         _c("span", { staticClass: "icon-text" }, [
                           _vm._v(_vm._s(_vm.notification.author))
                         ])
                       ]),
                       _vm._v(" "),
-                      _c("v-col", { attrs: { sm: "12", md: "4", lg: "3" } }, [
+                      _c("v-col", { attrs: { cols: "12", sm: "4", md: "3" } }, [
                         _c("i", { staticClass: "far fa-calendar-alt" }),
                         _c("span", { staticClass: "icon-text" }, [
                           _vm._v(_vm._s(_vm.notification.date_diff))
                         ])
                       ]),
                       _vm._v(" "),
-                      _c("v-col", { attrs: { sm: "12", md: "4", lg: "3" } }, [
+                      _c("v-col", { attrs: { cols: "12", sm: "4", md: "3" } }, [
                         _c("i", { staticClass: "far fa-eye" }),
                         _c("span", { staticClass: "icon-text" }, [
                           _vm._v(_vm._s(_vm.notification.views))
@@ -42154,6 +42195,85 @@ var render = function() {
                             1
                           )
                         }),
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-row",
+                    { attrs: { align: "center", justify: "space-around" } },
+                    [
+                      _c(
+                        "v-col",
+                        { attrs: { align: "center" } },
+                        [
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: {
+                                tile: "",
+                                color: "success",
+                                id: "social-btn-1"
+                              }
+                            },
+                            [
+                              _c("i", { staticClass: "fab fa-facebook-f" }),
+                              _vm._v(
+                                "\n                  | facebook\n                "
+                              )
+                            ]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-col",
+                        { attrs: { align: "center" } },
+                        [
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: {
+                                tile: "",
+                                color: "success",
+                                id: "social-btn-2"
+                              }
+                            },
+                            [
+                              _c("i", { staticClass: "fab fa-instagram" }),
+                              _vm._v(
+                                "\n                  | instagram\n                "
+                              )
+                            ]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-col",
+                        { attrs: { align: "center" } },
+                        [
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: {
+                                tile: "",
+                                color: "success",
+                                id: "social-btn-3"
+                              }
+                            },
+                            [
+                              _c("i", { staticClass: "fab fa-youtube" }),
+                              _vm._v(
+                                "\n                  | youtube\n                "
+                              )
+                            ]
+                          )
+                        ],
                         1
                       )
                     ],
