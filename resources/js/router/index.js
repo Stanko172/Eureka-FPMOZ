@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import Home from '../views/Home.vue';
 import Articles from '../views/Articles.vue';
 import Article from '../views/Article.vue';
+import Publications from '../views/Publications.vue';
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ const routes = [
         path: '/vijesti/:alias',
         name: 'Article',
         component: Article,
+    },
+    {
+        path: '/izdanja',
+        name: 'Publications',
+        component: Publications,
     }
 ]
 

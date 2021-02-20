@@ -19,7 +19,7 @@
 					  		<p class="home-text" data-text="Studentski časopis sa FPMOZ-a">Studentski časopis sa FPMOZ-a</p>
 					  	</div>
 
-			     		<v-btn color="#1B4188">Popis članaka</v-btn>
+			     		<v-btn color="#1B4188" to="/vijesti">Popis članaka</v-btn>
 			     	</div>
 
 			    </v-container>
