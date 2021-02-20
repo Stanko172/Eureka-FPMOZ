@@ -119,7 +119,7 @@
 
         <v-container fluid>
             <v-row>
-                <v-col cols="4" v-for="(image, index) in notification.images" :key="index" class="d-flex justify-center justify-md-start">
+                <v-col cols="12" md="6" lg="4" v-for="(image, index) in notification.images" :key="index" class="d-flex justify-center justify-md-start">
                     <!-- img -->
                     <a @click="toggleImage(image)">
                       <v-img
