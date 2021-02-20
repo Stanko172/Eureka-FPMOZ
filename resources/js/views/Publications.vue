@@ -35,11 +35,9 @@
 
 <script>
 import Navbar from '../components/Navbar.vue';
-import Footer from '../components/Navbar.vue';
     export default {
         components:{
-            Navbar,
-            Footer
+            Navbar
         },
         data(){
             return{
@@ -62,9 +60,6 @@ import Footer from '../components/Navbar.vue';
                     }
                 ]
             }
-        },
-        mounted() {
-            console.log('Component mounted.')
         }
     }
 </script>

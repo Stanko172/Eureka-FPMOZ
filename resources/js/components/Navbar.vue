@@ -15,7 +15,7 @@
         <v-btn text to="/" class="light">Naslovnica</v-btn>
         <v-btn text to="/vijesti" class="light">Članci</v-btn>
         <v-btn text to="/izdanja" class="light">Izdanja</v-btn>
-        <v-btn text to="/postani_clan" class="light">Studiji</v-btn>
+        <v-btn text to="/studiji" class="light">Studiji</v-btn>
       </div>
 
       </v-sheet>
