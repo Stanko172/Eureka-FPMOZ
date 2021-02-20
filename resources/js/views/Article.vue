@@ -136,8 +136,53 @@
                 </v-col>
             </v-row>
         </v-container>
+
+        <!--Article documents-->
+        <div v-if="notification.documents.length !== 0">
+            <h2 class="pt-10 mb-10"style="color: #1B4188;">Dokumenti</h2>
             
-        </v-container>
+             <v-expansion-panels>
+                <v-expansion-panel
+                  v-for="(document,index) in notification.documents"
+                  :key="index"
+                >
+                  <v-expansion-panel-header>
+                    {{ document.title }}
+                  </v-expansion-panel-header>
+                  <v-expansion-panel-content>
+                    <a :href="'https://web-admin.sum.ba/api/storage/' + document.filename">Preuzmi ovdje</a>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+              </v-expansion-panels>
+        </div>
+
+        <div v-if="notification.video !== null">
+            <h2 class="pt-10 mb-10"style="color: #1B4188;">Video</h2>
+            
+            <div class="text-center mb-6 mt-4">
+                <v-dialog scrollable>
+                  <template v-slot:activator="{ on }">
+                    <v-btn color="#1B4188" v-on="on" style="margin-right: 1em" rounded class="mb-5">
+                      <v-icon left class="white--text">mdi-play</v-icon>
+                      <span class="button-text">Pogledajte video</span>
+                    </v-btn>
+                  </template>
+                  <v-card height="78vh">
+                    <iframe
+                      height="100%"
+                      :src="notification.video"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </v-card>
+                </v-dialog>
+            </div>
+        </div>  
+
+    </v-container>
+        
+
     </div>
 </template>
 
