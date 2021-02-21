@@ -49,50 +49,7 @@
 
     <div  class="d-flex justify-center align-center" style="height: 12em;"> <h1 style="color: #1B4188;">Tko sudjeluje u razvoju projekta?</h1> </div>
 
-    <v-container>
-    	<v-row>
-    		<v-col v-for="i in 3" :key="i">
-    			<v-card
-				    class="mx-auto"
-				    max-width="300"
-				  >
-				    <v-img
-				      class="white--text align-end"
-				      height="200px"
-				      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-				    >
-				      <v-card-title>Top 10 Australian beaches</v-card-title>
-				    </v-img>
-
-				    <v-card-subtitle class="pb-0">
-				      Number 10
-				    </v-card-subtitle>
-
-				    <v-card-text class="text--primary">
-				      <div>Whitehaven Beach</div>
-
-				      <div>Whitsunday Island, Whitsunday Islands</div>
-				    </v-card-text>
-
-				    <v-card-actions>
-				      <v-btn
-				        color="orange"
-				        text
-				      >
-				        Share
-				      </v-btn>
-
-				      <v-btn
-				        color="orange"
-				        text
-				      >
-				        Explore
-				      </v-btn>
-				    </v-card-actions>
-				  </v-card>
-    		</v-col>
-    	</v-row>
-    </v-container>
+    <Participants />
 
     <div class="d-flex justify-center align-center" style="height: 7em;"> <h1 style="color: #1B4188;"></h1></div>
 
@@ -120,15 +77,17 @@ import Info from '../components/Info.vue';
 import Carousel from '../components/Carousel.vue';
 import ContactForm from '../components/ContactForm.vue';
 import Redactor from '../components/Redactor.vue';
+import Participants from '../components/Participants.vue';
 import Footer from '../components/Footer.vue';
 export default {
     components: {
     	Navbar,
     	Info,
-      Carousel,
-      ContactForm,
-      Redactor,
-      Footer
+        Carousel,
+        ContactForm,
+        Redactor,
+        Participants,
+        Footer
     },
     data(){
     	return{
