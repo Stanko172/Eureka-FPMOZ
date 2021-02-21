@@ -14,22 +14,29 @@
             </v-col>
             <v-col sm="12" md="12" lg="6">
                 <v-container>
-                    <div class="d-flex justify-center align-center"> <h1 style="color: #1B4188;">Kontaktiraj nas</h1></div>
-                    <v-form>
+                    <div class="d-flex justify-center align-center mt-12"> <h1 style="color: #1B4188;">Kontaktiraj nas</h1></div>
+                   
+                   <v-container class="d-flex flex-column justify-center align-center">
+                     <div class="mt-15 d-flex align-center contact">
+                       <i class="far fa-envelope"></i>
+                       <span class="contact-text">eureka@fpmoz.sum.ba</span>
+                     </div>
 
-                        <v-text-field
-                          label="E-mail"
-                        ></v-text-field>
+                     <div class="mt-15 d-flex align-center contact">
+                       <i class="fab fa-youtube"></i>
+                       <span class="contact-text">Časopis Eureka</span>
+                     </div>
 
-                        <v-textarea
-                          solo
-                          height="400px"
-                          name="input-7-4"
-                          label="Poruka"
-                        ></v-textarea>
+                     <div class="mt-10 d-flex align-center contact">
+                       <i class="fab fa-instagram"></i>
+                       <span class="contact-text">  @eureka_fpmoz</span>
+                     </div>
 
-                  </v-form>
-                  <v-btn color="#1B4188" block>Pošalji</v-btn>
+                     <div class="mt-10 d-flex align-center contact">
+                       <i class="fab fa-facebook"></i>
+                       <span class="contact-text"> @eurekafpmoz</span>
+                     </div>
+                   </v-container>
                 </v-container>
             </v-col>
         </v-row>
@@ -54,6 +61,31 @@
   box-shadow: 2px 8px 15px 0.2px #888888;
   border-radius: 15px 50px 30px;
   padding: 2em;
+}
+
+.contact .fab, .far{
+  font-size: 38px;
+  margin-right: 10px;
+}
+
+.contact-text{
+  font-size: 18px;
+}
+
+.contact .fa-youtube{
+  color: rgb(255, 0, 0);
+}
+
+.contact .fa-facebook{
+  color: rgb(59, 89, 152);
+}
+
+.contact .fa-instagram{
+  color: rgb(251, 173, 80);
+}
+
+.contact .fa-envelope{
+  color: #1B4188;
 }
 
 </style>
