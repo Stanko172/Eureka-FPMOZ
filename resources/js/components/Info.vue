@@ -43,9 +43,9 @@
 export default {
   data() {
     return {
-      link_yt: "",
-      link_fb: "",
-      link_insta: "",
+      link_yt: "https://www.youtube.com/channel/UCUAX6vt6JLFuf_9jM_pHMLw",
+      link_fb: "https://www.facebook.com/eurekafpmoz",
+      link_insta: "https://www.instagram.com/eureka_fpmoz/",
       item: {
         color: "red"
       }

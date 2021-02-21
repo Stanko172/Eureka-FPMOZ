@@ -15,8 +15,9 @@
           text
           rounded
           class="my-2"
+          :to="link.route"
         >
-          {{ link }}
+          {{ link.name }}
         </v-btn>
         <v-col
           cols="12"
@@ -35,10 +36,22 @@
       data(){
         return{
           links: [
-            'Naslovnica',
-            'Članci',
-            'Izdanja',
-            'Studiji'
+            {
+              name: 'Naslovnica',
+              route: '/'
+            },
+            {
+              name: 'Članci',
+              route: '/vijesti'
+            },
+            {
+              name: 'Izdanja',
+              route: '/izdanja'
+            },
+            {
+              name: 'Studiji',
+              route: '/studiji'
+            }
           ],
         }
       }

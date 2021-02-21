@@ -78,6 +78,7 @@
                       tile
                       color="success"
                       id="social-btn-1"
+                      href="https://www.facebook.com/eurekafpmoz"
                     >
                       <i class="fab fa-facebook-f"></i>
                       | facebook
@@ -89,6 +90,7 @@
                       tile
                       color="success"
                       id="social-btn-2"
+                      href="https://www.instagram.com/eureka_fpmoz/"
                     >
                       <i class="fab fa-instagram"></i>
                       | instagram
@@ -100,6 +102,7 @@
                       tile
                       color="success"
                       id="social-btn-3"
+                      href="https://www.youtube.com/channel/UCUAX6vt6JLFuf_9jM_pHMLw"
                     >
                       <i class="fab fa-youtube"></i>
                       | youtube
