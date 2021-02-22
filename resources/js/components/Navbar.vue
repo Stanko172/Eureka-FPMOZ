@@ -39,21 +39,21 @@
             <v-list-item-icon>
               <i class="fas fa-newspaper"></i>
             </v-list-item-icon>
-            <v-list-item-title><v-btn text to="/tecajevi_pregled"><span style="color: black !important;">Članci</span></v-btn></v-list-item-title>
+            <v-list-item-title><v-btn text to="/vijesti"><span style="color: black !important;">Članci</span></v-btn></v-list-item-title>
           </v-list-item>
 
           <v-list-item>
             <v-list-item-icon>
               <i class="fas fa-book-open"></i>
             </v-list-item-icon>
-            <v-list-item-title><v-btn text to="/postani_clan"><span style="color: black !important;">Izdanja</span></v-btn></v-list-item-title>
+            <v-list-item-title><v-btn text to="/izdanja"><span style="color: black !important;">Izdanja</span></v-btn></v-list-item-title>
           </v-list-item>
 
           <v-list-item>
             <v-list-item-icon>
               <i class="fas fa-university"></i>
             </v-list-item-icon>
-            <v-list-item-title><v-btn text to="/auth"><span style="color: black !important;">Studiji</span></v-btn></v-list-item-title>
+            <v-list-item-title><v-btn text to="/studiji"><span style="color: black !important;">Studiji</span></v-btn></v-list-item-title>
           </v-list-item>
 
         </v-list-item-group>
