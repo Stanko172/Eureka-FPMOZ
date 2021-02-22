@@ -40,7 +40,7 @@
         			},
         			{
         				name: 'Udruga Switch',
-        				url: 'https://iili.io/fw9qLG.jpg'
+        				url: 'https://iili.io/fNxdZv.jpg'
         			}
         		]
         	}

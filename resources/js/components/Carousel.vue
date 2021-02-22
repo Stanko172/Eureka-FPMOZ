@@ -40,7 +40,7 @@
                 <span class="carousel-text">Eureka</span>
               </v-list-item-content>
               <v-list-item-action>
-                <v-btn color="#1B4188" to="/vijesti">Pregled članaka</v-btn>
+                <v-btn color="#1B4188" to="/vijesti">Pregled</v-btn>
               </v-list-item-action>
             </v-list-item>
           </v-list>

@@ -25,7 +25,7 @@
             <v-card-text>
               <v-container>
                 <v-row>
-              <v-col cols="4">
+              <v-col cols="12" sm="4">
 
                 <v-img
                   width="350"
@@ -35,7 +35,7 @@
 
               </v-col>
 
-              <v-col cols="8">
+              <v-col cols="12" sm="8">
 
                 <div class="d-flex flex-column justify-content-between" style="height: 100%;">
 

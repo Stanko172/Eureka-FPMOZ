@@ -38,7 +38,7 @@
                               </v-card>
                             </v-dialog>
 
-                            <v-btn :href="item.info" color="#1B4188" v-on="on" style="margin-right: 1em" rounded    class="mb-5">
+                            <v-btn :href="item.info" color="#1B4188" style="margin-right: 1em" rounded    class="mb-5">
                               <v-icon left class="white--text">mdi-eye</v-icon>
                               <span class="button-text" >Više</span>
                             </v-btn>
