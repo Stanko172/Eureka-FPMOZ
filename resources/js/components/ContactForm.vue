@@ -4,12 +4,12 @@
             <v-col sm="12" md="12" lg="6">
                 <div  class="d-flex justify-center align-center" style="height: 12em;"> <h1 style="color: #1B4188;">Pisanje članaka</h1> </div>
 
-                <p style="text-align: justify;">Proin pellentesque, justo lobortis pretium rutrum, orci orci volutpat tortor, vitae congue lectus ligula ut sapien. Donec vehicula et nunc a tristique. Donec maximus tristique enim sed dapibus. Sed et ligula ex. Aliquam erat volutpat. Nulla ornare justo eget ex elementum faucibus. Praesent elementum odio ac imperdiet dictum. Vestibulum in semper enim. Aenean porta dui quis mollis congue. </p>
+                <p style="text-align: justify;">Studenti sa cijelog FPMOZ-a sudjeluju u pisanju članaka i razvoju projekta Eureka. Također, svi studenti se mogu uključiti u projekt tijekom cijele akademske godine. Teme članaka su raznolike i kreću se od stručnih tema, pa do različitih priča i aktivnosti sa studija, te studentskih projekata. Ukoliko su studenti zainteresirani za sudjelovanje mogu su javiti na e-mail uredništva: eureka@fpmoz.sum.ba</p>
 
 
                 <div  class="d-flex justify-center align-center" style="height: 12em;"> <h1 style="color: #1B4188;">Razvoj web stranice</h1> </div>
 
-                <p style="text-align: justify;">Proin pellentesque, justo lobortis pretium rutrum, orci orci volutpat tortor, vitae congue lectus ligula ut sapien. Donec vehicula et nunc a tristique. Donec maximus tristique enim sed dapibus. Sed et ligula ex. Aliquam erat volutpat. Nulla ornare justo eget ex elementum faucibus. Praesent elementum odio ac imperdiet dictum. Vestibulum in semper enim. Aenean porta dui quis mollis congue. </p>
+                <p style="text-align: justify;">Od akademske godine 2020/2021 Eureka je dobila i svoju online verziju. Pored PDF verzija svih brojeva časopisa, studentima su članci dostupni i putem web stranice. Članci se na web stranicu postavljaju kontinuirano kroz cijelu akademsku godinu. Web stranicu za Eureku su izradili i održavaju članovi informatičko-tehničke udruge Switch sa FPMOZ-a.</p>
 
             </v-col>
             <v-col sm="12" md="12" lg="6">
