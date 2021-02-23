@@ -31,7 +31,7 @@
         <v-flex xs12 md6>
           <div
             class="mx-5 text-justify mb-5">
-          Eureka je studentski časopis sa Fakulteta prirodoslovno-matematičkih i odgojnih znanosti. Prvi broj izlazi 2009 godine, a nakon toga još tri broja: 2015, 2016 i 2017 godine. Eureka donosi različite priče, aktivnosti i projekte sa svih studija FPMOZ-a, ali i razgovore sa predstavnicima Fakulteta i studentima, te stručne teme.<br /><br />
+          Eureka je studentski časopis Fakulteta prirodoslovno-matematičkih i odgojnih znanosti. Prvi broj izlazi 2009 godine, a nakon toga još tri broja: 2015, 2016 i 2017 godine. Eureka donosi različite priče, aktivnosti i projekte sa svih studija FPMOZ-a, ali i razgovore sa predstavnicima Fakulteta i studentima, te stručne teme.<br /><br />
 
           Sva izdanja Eureke dostupna su i u PDF formatu, a mogu se pronaći na stranicama FPMOZ-a i web stranici Eureke. Od akademske 2020/2021 godine članci časopisa su dostupni i putem web stranice koju su izradili i održavaju studenti studija informatike. Studenti postavljaju članke kontinuirano kroz akademsku godinu, a sve aktivnosti vezane za Eureku mogu se pratiti i na društvenim mrežama koje također vode studenti.<br /><br />
 

@@ -16,7 +16,7 @@
 			     		<div class="home-heading">Eureka</div>
 
 			     		<div class="text-animation-container">
-					  		<p class="home-text" data-text="Studentski časopis sa FPMOZ-a">Studentski časopis sa FPMOZ-a</p>
+					  		<p class="home-text" data-text="Studentski časopis sa FPMOZ-a">Studentski časopis FPMOZ</p>
 					  	</div>
 
 			     		<v-btn color="#1B4188" to="/vijesti">Popis članaka</v-btn>

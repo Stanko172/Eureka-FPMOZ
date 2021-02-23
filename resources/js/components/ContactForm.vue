@@ -14,7 +14,7 @@
             </v-col>
             <v-col sm="12" md="12" lg="6">
                 <v-container>
-                    <div class="d-flex justify-center align-center mt-12"> <h1 style="color: #1B4188;">Kontaktiraj nas</h1></div>
+                    <div class="d-flex justify-center align-center mt-12"> <h1 style="color: #1B4188;">Kontaktirajte nas</h1></div>
                    
                    <v-container class="d-flex flex-column justify-center align-center">
                      <div class="mt-15 d-flex align-center contact">
