@@ -7,7 +7,7 @@
           <v-breadcrumbs :items="items">
             <template v-slot:item="{ item }">
               <v-breadcrumbs-item
-                :href="'http://localhost/Eureka/public/#' + item.to"
+                :href="'https://eureka.fpmoz.sum.ba/#' + item.to"
                 :disabled="item.disabled"
               >
                 {{ item.text.toUpperCase() }}
