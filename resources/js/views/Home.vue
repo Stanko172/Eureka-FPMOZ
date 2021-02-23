@@ -28,7 +28,7 @@
 
 		    <div class="eureka-image" style="width: 200px;"></div>
 
-		    <div class="eureka-image" style="z-index: 10 !important;">
+		    <div class="eureka-image">
 	     		<img src="https://iili.io/fCav5l.png" />
 	     	</div>
 

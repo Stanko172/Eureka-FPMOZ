@@ -42,6 +42,6 @@
 
 
 
-        <script src="{{ asset('js/app.js?version=4') }}"></script>
+        <script src="{{ asset('js/app.js?version=5') }}"></script>
     </body>
 </html>
