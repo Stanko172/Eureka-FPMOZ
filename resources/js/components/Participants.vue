@@ -36,7 +36,7 @@
         			},
         			{
         				name: 'Studentski zbor',
-        				url: 'https://iili.io/fw9Tk7.jpg'
+        				url: 'https://iili.io/qvELPt.png'
         			},
         			{
         				name: 'Udruga Switch',

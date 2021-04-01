@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//URL::forceRootUrl('https://eureka.fpmoz.sum.ba');
+URL::forceRootUrl('https://eureka.fpmoz.sum.ba');
 
 Route::get('/', function () {
     return view('welcome');
