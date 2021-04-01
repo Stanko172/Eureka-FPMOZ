@@ -6,6 +6,9 @@
 
         <title>Eureka FPMOZ</title>
 
+        <meta name="description" content="Eureka je studentski časopis Fakulteta prirodoslovno matematičkih i odgojnih znanosti. Sva izdanja Eureke, pored klasične verzije, dostupna su i u PDF formatu, a mogu se pronaći na stranicama FPMOZ-a i web stranici Eureke. Svi studenti koji su zainteresirani za razvoj projekta mogu se javiti na eureka@fpmoz.sum.ba">
+
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
@@ -42,6 +45,6 @@
 
 
 
-        <script src="{{ asset('js/app.js?version=6') }}"></script>
+        <script src="{{ asset('js/app.js?version=7') }}"></script>
     </body>
 </html>
