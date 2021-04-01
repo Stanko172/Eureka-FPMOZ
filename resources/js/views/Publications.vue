@@ -57,6 +57,10 @@ import Navbar from '../components/Navbar.vue';
                     {
                         name: 'Eureka (4. broj)',
                         url: 'https://www.fpmoz.sum.ba/eureka/eureka4.pdf'
+                    },
+                    {
+                        name: 'Eureka (5. broj)',
+                        url: 'https://www.fpmoz.sum.ba/eureka/eureka5.pdf'
                     }
                 ]
             }

@@ -18,11 +18,10 @@
         <v-btn text to="/studiji" class="light">Studiji</v-btn>
       </div>
 
-      </v-sheet>
     </v-app-bar>
 
     <!--Navigation drawer for small devices-->
-    <v-navigation-drawer v-model="drawer" absolute temporary style="z-index: 10000">
+    <v-navigation-drawer v-model="drawer" absolute temporary style="z-index: 10000; position: fixed !important;">
       <v-list nav dense>
         <v-list-item-group
           v-model="group"

@@ -16,7 +16,7 @@
           </v-breadcrumbs>
 
         <v-container>
-          <h2 class="pt-10 mb-10"style="color: #1B4188;">{{ notification.title }}</h2>
+          <h2 class="pt-10 mb-10" style="color: #1B4188;">{{ notification.title }}</h2>
 
           <!--Article info-->
           <v-row>
@@ -118,7 +118,7 @@
           </v-container>
 
         <!--Article images-->
-        <h2 class="pt-10 mb-10"style="color: #1B4188;">Slike</h2>
+        <h2 class="pt-10 mb-10" style="color: #1B4188;">Slike</h2>
 
         <v-container fluid>
             <v-row>
@@ -142,7 +142,7 @@
 
         <!--Article documents-->
         <div v-if="notification.documents.length !== 0">
-            <h2 class="pt-10 mb-10"style="color: #1B4188;">Dokumenti</h2>
+            <h2 class="pt-10 mb-10" style="color: #1B4188;">Dokumenti</h2>
             
              <v-expansion-panels>
                 <v-expansion-panel
@@ -160,7 +160,7 @@
         </div>
 
         <div v-if="notification.video !== null">
-            <h2 class="pt-10 mb-10"style="color: #1B4188;">Video</h2>
+            <h2 class="pt-10 mb-10" style="color: #1B4188;">Video</h2>
             
             <div class="text-center mb-6 mt-4">
                 <v-dialog scrollable>
@@ -325,15 +325,15 @@ import Navbar from '../components/Navbar.vue';
 
     /*Article images CSS*/
     .lb {
-    display: none;
-    position: fixed!important;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0.8);
-    text-align:center;
+      display: none;
+      position: fixed!important;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,0.8);
+      text-align:center;
     }
 
     .lb img {
@@ -349,5 +349,12 @@ import Navbar from '../components/Navbar.vue';
 
     a.lb:hover {cursor:default;}
     img:hover {cursor:pointer;}
+
+    @media only screen and (max-width: 600px) {
+    .lb {
+      top: 10%;
+      left: 0;
+    }
+  }
 
 </style>
