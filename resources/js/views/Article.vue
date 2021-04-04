@@ -350,10 +350,9 @@ import Navbar from '../components/Navbar.vue';
     a.lb:hover {cursor:default;}
     img:hover {cursor:pointer;}
 
-    @media only screen and (max-width: 600px) {
-    .lb {
-      top: 10%;
-      left: 0;
+    @media only screen and (max-width: 900px) {
+    .lb img{
+      margin-top: 25%;
     }
   }
 
